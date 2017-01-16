@@ -84,19 +84,19 @@
 
 
 
-<meta name="description" content="在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.   
-NSString *str1 = @&amp;quot;apple is good&amp;quot;;">
+<meta name="description" content="在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.
+12345678910111213#import &quot;WRBookDetailViewContro">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C语言剖析OC的rangeOfString方法">
 <meta property="og:url" content="www.baidu.com/2017/01/16/test/index.html">
 <meta property="og:site_name" content="筱">
-<meta property="og:description" content="在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.   
-NSString *str1 = @&amp;quot;apple is good&amp;quot;;">
-<meta property="og:updated_time" content="2017-01-16T09:31:44.000Z">
+<meta property="og:description" content="在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.
+12345678910111213#import &quot;WRBookDetailViewContro">
+<meta property="og:updated_time" content="2017-01-16T10:52:06.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C语言剖析OC的rangeOfString方法">
-<meta name="twitter:description" content="在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.   
-NSString *str1 = @&amp;quot;apple is good&amp;quot;;">
+<meta name="twitter:description" content="在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.
+12345678910111213#import &quot;WRBookDetailViewContro">
 
 
 
@@ -340,15 +340,8 @@ NSString *str1 = @&amp;quot;apple is good&amp;quot;;">
       
 
       
-        <p>在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。<br>需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.<br>   <br></p>
-<pre><code>NSString *str1 = @&quot;apple is good&quot;;
-NSString *str2 = @&quot;pear&quot;;
-
-NSRange range = [str1 rangeOfString:str2];
-if(range.location != NSNotFound){
-    NSLog(@&quot;ASFASFASF&quot;);
-}
-</code></pre>
+        <p>在OC中，我们选择- (NSRange)rangeOfString:方法来判断字符串是否存在。该方法返回的是一个NSRange 类型的结构体，成员变量包括location、length。<br>需要注意的是：当这个字符串不存在时，返回的location不仅仅是NSNotFound，并且length的值也是0.</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#import <span class="meta-string">"WRBookDetailViewController.h"</span></span></div><div class="line"><span class="meta">#import <span class="meta-string">"WRReviewViewController.h"</span></span></div><div class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Mediator</span></span></div><div class="line">- (<span class="keyword">void</span>)gotoDetail &#123;</div><div class="line">    WRBookDetailViewController *detailVC = [[WRBookDetailViewController alloc] initWithBookId:<span class="keyword">self</span>.bookId];</div><div class="line">    [<span class="keyword">self</span>.navigationController.pushViewController:detailVC animated:<span class="literal">YES</span>];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (<span class="keyword">void</span>)gotoReview &#123;</div><div class="line">    WRReviewViewController *reviewVC = [[WRReviewViewController alloc] initWithBookId:<span class="keyword">self</span>.bookId reviewType:<span class="number">1</span>];</div><div class="line">    [<span class="keyword">self</span>.navigationController.pushViewController:reviewVC animated:<span class="literal">YES</span>];</div><div class="line">&#125;</div><div class="line"><span class="keyword">@end</span></div></pre></td></tr></table></figure>
       
     </div>
 
@@ -376,22 +369,6 @@ if(range.location != NSNotFound){
         </div>
       
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/01/16/test2/" rel="prev" title="老婆">
-                老婆 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
 
       
@@ -449,7 +426,7 @@ if(range.location != NSNotFound){
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">1</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
